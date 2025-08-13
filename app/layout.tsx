@@ -13,10 +13,9 @@ import Footer from "@/components/Footer"
 import Container from "@/components/Container"
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { Toaster } from "@/components/ui/toaster"
-import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin"
-import { extractRouterConfig } from "uploadthing/server"
 
-import { ourFileRouter } from "./api/uploadthing/core"
+
+
 import Navbarr from "@/components/Navbar"
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] })
@@ -41,7 +40,6 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
             <Toaster />
             <main>
               <Navbarr />
